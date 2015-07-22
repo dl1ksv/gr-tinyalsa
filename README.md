@@ -7,28 +7,35 @@ At the moment only an audio-sink is available
 
 Mainly to run gnuradio python scripts on android.
 
-1. Installation on Linux
+1.Installation on Linux
+    
+    get the latest code from https://github.com/dl1ksv/gr-tinyalsa
 
-get the latest code from https://github.com/dl1ksv/gr-tinyalsa
+    The build process is cmake based. So change to code directory.
+  
+    There
 
-The build process is cmake based. So change to code directory.
-There
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=<where gnuradio is installed> ../
+    make
+  
+    su
+  
+    make install
 
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=<where gnuradio is installed> ../
-make
-su
-make install
+
+	If you are unsure about the CMAKE_INSTALL_PREFIX
+  
+ 	run
+
+	gnuradio-config-info --prefix
 
 
-If you are unsure about the CMAKE_INSTALL_PREFIX run
+2.Building for Android 
+    
+    Have a look at the gnuradio branch of my python_for_android fork 
 
-gnuradio-config-info --prefix
+3.To be done
 
-2. Building for Android
-Have a look at the gnuradio branch of my python_for_android fork 
-
-3. To be done
-
-Implementing audio source
+    Implementing audio source
